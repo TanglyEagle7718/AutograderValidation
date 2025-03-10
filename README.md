@@ -45,11 +45,17 @@ The `questions.json` file is the main file for telling the llm what exactly need
 ```
 
 Params for `'homeworkX'`:
+
 `csv_file`: This is a relative (to `questions.json`) path to the `homeworkX` csv file downloaded from gradescope
+
 `questionY.Z`: The question you would like to analyze
+
 `rubric`: The rubric for `questionY.Z`
+
 `ta_score`: Name of the column that contains the score that the TA provided
+
 `student_response`: Name of the column that contains the student responses
+
 `example_llm_response`: An example of a list of ta scores. (ex: if a ta gives student A a score of 5, student B a score of 10, etc, then a example response would be `"5, 10"`)
 
 ## Running the model
