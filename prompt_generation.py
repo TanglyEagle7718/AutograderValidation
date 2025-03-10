@@ -1,8 +1,4 @@
 import csv
-import json
-
-import driver
-
 from google import genai
 
 def generate_text(prompt):
@@ -60,6 +56,13 @@ def read_csv_columns(file_path, score, response):
             length += 1
             retscore.append(row[score])
 
-        return responses, score, length
+        return responses, retscore, length
+    
+def get_ids(file_path):
+    with open(file_path, mode='r', encoding='utf-8-sig') as file:
+        reader = csv.DictReader(file)
+        id: list = list()
+        for row in reader:
+            id.append(row['Student ID'])
 
-
+        return id

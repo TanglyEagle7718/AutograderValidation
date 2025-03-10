@@ -1,3 +1,4 @@
 api_key.txt
 *.csv
 *.json
+__pycache__
